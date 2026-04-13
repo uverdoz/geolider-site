@@ -15,8 +15,8 @@ export default function Home() {
   }, []);
 
   const works = [
-    { type: "video", src: "/videos/work.mp4", title: "" }, // 👈 ВИДЕО
-    { type: "image", src: "/images/2.jpg", title: "" },
+    { type: "image", src: "/images/2.jpg", title: "" }, // 👈 ВИДЕО
+    { type: "video", src: "/videos/work.mp4", title: "" },
     { type: "image", src: "/images/3.jpg", title: "" },
     { type: "image", src: "/images/4.jpg", title: "" },
     { type: "image", src: "/images/5.jpg", title: "" },
