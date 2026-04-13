@@ -376,33 +376,32 @@ export default function Home() {
 
         <div className="flex gap-4 justify-center">
 
-          {works.slice(currentSlide, currentSlide + (isMobile ? 1 : 3)).map((work, i) => (
-            <div key={i}
-              className="w-full md:w-[300px] h-[280px] md:h-[380px] relative rounded-2xl overflow-hidden group shadow-md hover:shadow-2xl transition duration-300">
+          {(isMobile ? works : works.slice(currentSlide, currentSlide + 3)).map((work, i) => (<div key={i}
+            className="w-full md:w-[300px] h-[280px] md:h-[380px] relative rounded-2xl overflow-hidden group shadow-md hover:shadow-2xl transition duration-300">
 
-              {work.type === "video" ? (
-                <video
-                  src={work.src}
-                  className="w-full h-full object-cover"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                />
-              ) : (
-                <img
-                  src={work.src}
-                  className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
-                />
-              )}
+            {work.type === "video" ? (
+              <video
+                src={work.src}
+                className="w-full h-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+              />
+            ) : (
+              <img
+                src={work.src}
+                className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+              />
+            )}
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
 
-              <p className="absolute bottom-4 left-4 text-white font-semibold text-sm">
-                {work.title}
-              </p>
+            <p className="absolute bottom-4 left-4 text-white font-semibold text-sm">
+              {work.title}
+            </p>
 
-            </div>
+          </div>
           ))}
 
         </div>
