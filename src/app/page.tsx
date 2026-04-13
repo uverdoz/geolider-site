@@ -15,11 +15,12 @@ export default function Home() {
   }, []);
 
   const works = [
-    { src: "/images/2.jpg", title: "" },
-    { src: "/images/3.jpg", title: "" },
-    { src: "/images/4.jpg", title: "" },
-    { src: "/images/5.jpg", title: "" },
-    { src: "/images/6.jpg", title: "" },
+    { type: "video", src: "/videos/work.mp4", title: "" }, // 👈 ВИДЕО
+    { type: "image", src: "/images/2.jpg", title: "" },
+    { type: "image", src: "/images/3.jpg", title: "" },
+    { type: "image", src: "/images/4.jpg", title: "" },
+    { type: "image", src: "/images/5.jpg", title: "" },
+    { type: "image", src: "/images/6.jpg", title: "" },
   ];
 
   const services = [
@@ -379,8 +380,21 @@ export default function Home() {
             <div key={i}
               className="w-full md:w-[300px] h-[280px] md:h-[380px] relative rounded-2xl overflow-hidden group shadow-md hover:shadow-2xl transition duration-300">
 
-              <img src={work.src}
-                className="w-full h-full object-cover transition duration-500 group-hover:scale-110" />
+              {work.type === "video" ? (
+                <video
+                  src={work.src}
+                  className="w-full h-full object-cover"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                />
+              ) : (
+                <img
+                  src={work.src}
+                  className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+                />
+              )}
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
 
