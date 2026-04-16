@@ -374,8 +374,7 @@ export default function Home() {
           Наши работы
         </h2>
 
-        <div className="flex gap-4 justify-center">
-
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
           {(isMobile ? works : works.slice(currentSlide, currentSlide + 3)).map((work, i) => (<div key={i}
             className="w-full md:w-[300px] h-[280px] md:h-[380px] relative rounded-2xl overflow-hidden group shadow-md hover:shadow-2xl transition duration-300">
 
