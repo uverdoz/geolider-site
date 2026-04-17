@@ -77,7 +77,7 @@ export default function Home() {
 
             {/* КНОПКА (чуть меньше на мобиле) */}
             <a
-              href="https://wa.me/87767390868"
+              href="https://api.whatsapp.com/send?phone=87767390868"
               className="bg-[#00C97B] text-white px-3 md:px-4 py-2 rounded-xl text-xs md:text-sm 
         shadow hover:scale-105 hover:shadow-lg transition"
             >
@@ -114,7 +114,7 @@ export default function Home() {
           </p>
 
           <a
-            href="https://wa.me/87767390868"
+            href="https://api.whatsapp.com/send?phone=87767390868"
             className="bg-[#00C97B] text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-semibold shadow-lg 
     hover:scale-105 transition text-sm sm:text-base"
           >
@@ -616,7 +616,7 @@ export default function Home() {
         </p>
 
         <a
-          href="https://wa.me/87767390868"
+          href="https://api.whatsapp.com/send?phone=87767390868"
           className="bg-[#00C97B] text-white px-8 py-4 rounded-xl font-semibold shadow-lg"
         >
           Написать в WhatsApp
